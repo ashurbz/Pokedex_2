@@ -1,5 +1,10 @@
+import LayoutComponent from "./components/LayoutComponent";
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <LayoutComponent />
+    </div>
+  );
 }
 
 export default App;

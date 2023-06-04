@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(148 163 184);
+  background-color: rgb(203 213 225);
+  padding: 20px;
+}
+
+input:focus {
+  outline: none;
 }

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { ImSearch } from "react-icons/im";
 
-const SearchComponent = () => {
+const SearchComponent = ({ searchBarData }) => {
   const [searchText, setSearchText] = useState("");
   const handleOnChange = (e) => {
     setSearchText(e.target.value);
+  };
+
+  const handleOnClick = () => {
+    searchBarData(searchText);
   };
 
   return (
@@ -21,7 +25,7 @@ const SearchComponent = () => {
             handleOnChange(e);
           }}
         />
-        <button className="text-2xl  -mx-[3.5rem]">
+        <button onClick={handleOnClick} className="text-2xl  -mx-[3.5rem]">
           <ImSearch className="-mb-2" />
         </button>
       </div>
